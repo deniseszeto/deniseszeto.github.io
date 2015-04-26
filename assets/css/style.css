@@ -145,7 +145,8 @@ a{
 }
 #scroll-guide{
   -webkit-animation: bounce-left 0.5s alternate infinite;
-  top: 600px;
+  -moz-animation: bounce-left 0.5s alternate infinite;
+  bottom: 20px;
   left: 90%;
   position: absolute;
   z-index: 0;
@@ -156,6 +157,11 @@ a{
 {
   from {-webkit-transform: translateX(0px);}
   to {-webkit-transform: translateX(-18px);}
+}
+@-moz-keyframes bounce-left /*Safari and Chrome*/
+{
+  from {-moz-transform: translateX(0px);}
+  to {-moz-transform: translateX(-18px);}
 }
 /* Slide 2 */
 #about-me{
@@ -260,6 +266,7 @@ a{
 .click-me-active{
   font-weight: 300;
   -webkit-animation: bounce-up 0.5s alternate infinite;
+  -moz-animation: bounce-up 0.5s alternate infinite;
   position: absolute;
   left: 250px;
   top: 300px;
@@ -286,6 +293,7 @@ a{
   height: 250px;
   margin-left: 0px;
   -webkit-transition: all 1s;
+  -moz-transition: all 13s;
 }
 .carousel-item{
   width: 800px;
@@ -312,6 +320,7 @@ a{
   border-radius: 50%;
   border: 1px solid #000;
   -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 
 /* Styling for the carousel next button */
@@ -327,6 +336,7 @@ a{
   border-radius: 50%;
   border: 1px solid #000;
   -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 .img-scaled{
   height: 25px;
@@ -354,6 +364,11 @@ a{
 {
   from {-webkit-transform: translateY(0px);}
   to {-webkit-transform: translateY(-18px);}
+}
+@-moz-keyframes bounce-up /*Safari and Chrome*/
+{
+  from {-moz-transform: translateY(0px);}
+  to {-moz-transform: translateY(-18px);}
 }
 
 
@@ -386,4 +401,49 @@ a{
 .circle:hover{
   opacity: 1;
   -webkit-transform:scale(1.25)
+  -moz-transform:scale(1.25)
+}
+
+
+/* Media Queries */
+
+@media (max-width: 1024px) {
+#background {
+  width: 1040px;
+  height: 800px;
+  min-height: 10%;
+  min-width: 10%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  overflow: hidden;
+  z-index: -2;
+}
+
+#background-img {
+  height: 800px;
+  min-height: 10%;
+  min-width: 10%;
+  position: fixed;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+#background-overlay {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  height: 102%;
+  width: 101%;
+  z-index: 0;
+  background-color: rgba(0,0,0,0.3);
+}
+#connect-container{
+  font-weight: 300;
+  margin-right: 30px;
+  margin-top: 19%;
+  color: rgba(190,190,190,0.7);
+  z-index: 4;
+}
 }
