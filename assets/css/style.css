@@ -145,6 +145,9 @@ a{
   margin: 0 5px;
   z-index: 5;
 }
+.icon:hover{
+  opacity: 1;
+}
 #scroll-guide{
   -webkit-animation: bounce-left 0.5s alternate infinite;
   -moz-animation: bounce-left 0.5s alternate infinite;
