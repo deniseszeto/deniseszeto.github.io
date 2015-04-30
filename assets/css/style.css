@@ -134,6 +134,9 @@ a{
   z-index: 2;
   display: inline-block;
 }
+.connect:hover{
+  opacity: 1;
+}
 .icon{
   width: 30px;
   height: 30px;
@@ -144,9 +147,6 @@ a{
   opacity: 0.7;
   margin: 0 5px;
   z-index: 5;
-}
-.icon:hover{
-  opacity: 1;
 }
 #scroll-guide{
   -webkit-animation: bounce-left 0.5s alternate infinite;
@@ -181,7 +181,7 @@ a{
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
   background: url(../images/life.jpg) no-repeat; 
-  background-size: 250%;
+  background-size: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, .8);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .8);
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, .8);
